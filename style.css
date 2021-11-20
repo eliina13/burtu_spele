@@ -1,2 +1,6 @@
+.wrapper {
+    background: rgb(214, 193, 241);
+}
 h1 
-{text-align: center;}
+{text-align: center;
+background: rgb(147, 215, 236);}
