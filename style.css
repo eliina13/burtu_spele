@@ -8,7 +8,8 @@ body {
     background-color: rgb(235, 226, 247);}
 .wrapper 
 {text-align: center;
-background: rgb(237, 166, 247);}
+background: rgb(237, 166, 247);
+line-height: 1,5 ;}
 
 table, th, td 
 { 
