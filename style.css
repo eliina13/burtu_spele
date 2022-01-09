@@ -1,5 +1,9 @@
 .wrapper {
     background-color: rgb(214, 193, 241);}
+.content {
+    text-size-adjust: 160%;
+    text-align: center;
+}
 h1 
 {text-align: center;
 background: rgb(232, 100, 250);}
