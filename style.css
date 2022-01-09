@@ -1,7 +1,7 @@
 .wrapper {
     background-color: rgb(214, 193, 241);}
 .content {
-    text-size-adjust: 160%;
+    text-size-adjust: 110%;
     text-align: center;
 }
 h1 
@@ -17,5 +17,6 @@ table, th, td
 }
 table 
 { width: 60%;
+ box-align: center
 text-align: center;
 font-size: 160%;}
