@@ -9,7 +9,7 @@ li
 {display: inline-block;}
 table, th, td 
 { 
-    border: 1px solid;
+    border-style: none;
 }
 table 
 { width: 100%;
