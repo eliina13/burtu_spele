@@ -11,4 +11,6 @@ table, th, td
 { 
     border: 1px solid;
 }
-table { width: 100%;}
+table 
+{ width: 100%;
+text-align: center;}
