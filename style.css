@@ -3,18 +3,13 @@ body {
 }
 
 .content {
-    font-size: medium ;
+    font-size: 120% ;
     text-align: center;
-    background-color: rgb(235, 226, 247);
-
-}
+    background-color: rgb(235, 226, 247);}
 .wrapper 
 {text-align: center;
 background: rgb(237, 166, 247);}
-ul 
-{text-align: center;}
-li 
-{display: inline-block;}
+
 table, th, td 
 { 
     border-style: none;
