@@ -5,6 +5,8 @@ body {
 .content {
     font-size: medium ;
     text-align: center;
+    background-color: rgb(235, 226, 247);
+
 }
 .wrapper 
 {text-align: center;
