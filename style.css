@@ -13,4 +13,5 @@ table, th, td
 }
 table 
 { width: 100%;
-text-align: center;}
+text-align: center;
+text-size-adjust: 160%;}
