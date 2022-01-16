@@ -19,3 +19,9 @@ table
 { width: 100%;  
 text-align: center;
 font-size: 140%;}
+section {
+    height: 85 vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
