@@ -51,27 +51,38 @@
             <form> 
                 <label for="bskaits"> Burtu skaits vārdā:</label> <br> 
                 <input type="number" min="5" max="10" name="cik" >
-                <input id="burtuskaits" type="button" value="Sākt spēli" onclick="saktspeli(vertiba);" >
-                <br>
+                <!--<button class="starts">Sākt spēli</button>
+                <input id="burtuskaits" type="button" value="Sākt spēli" onclick="saktspeli(vertiba);" -->
+                <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">
+                <br> 
+                <div class="game" id="games"> 
                 <label style="margin:20px;" id="laiks">laiks = 60 s</label>
                 <label style="margin:20px;" id="punkti"></label>
-            </form>
-        </div>
-        </section>
-               <div class="game" id="games"> 
-                    <div class="block">S</div>
+
+                    <!--<div class="block">S</div>
                     <div class="block">A</div>
                     <div class="block">U</div>
                     <div class="block">L</div>
-                    <div class="block">E</div>
+                    <div class="block">E</div> -->
                </div>
+            </form>
+        </div>
+        </section>
         </div>
     </div>
     <script>
 
-    
-    function saktspeli (vertiba) 
-       
+    const sp = document.querySelector ('.sp')
+    const game =document.querySelector ('.input')
+    let play = false;
+
+    sp.addEventListener ('click', function( )
+     { if (!play)
+    {play = true ; 
+        sp.innerHTML = "game";
+        game.classList.toggle ('game')
+    }
+}   
 
     </script>
 </body>
