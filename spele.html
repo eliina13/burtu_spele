@@ -44,46 +44,65 @@
         </div> <!--Šajā vietā beidzas head daļa-->
 
         <div class="content">
-            <br>
-            <br>
+
             <section> 
             <div class="startaLaukums"> 
+                
             <form> 
-                <label for="bskaits"> Burtu skaits vārdā:</label> <br> 
-                <input type="number" min="5" max="10" name="cik" >
-                <!--<button class="starts">Sākt spēli</button>
-                <input id="burtuskaits" type="button" value="Sākt spēli" onclick="saktspeli(vertiba);" -->
-                <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">
-                <br> 
-                <div class="game" id="games"> 
-                <label style="margin:20px;" id="laiks">laiks = 60 s</label>
-                <label style="margin:20px;" id="punkti"></label>
+                <label id=ievaditaisSkaitlis for="bskaits"> Burtu skaits vārdā:</label> <br> 
+               <input id=ievade type="number" min="5" max="10" name="cik" class="vg" >
+                <button class= "btn" value="Sākt spēli" onclick="saktSpeli( lv);">Sākt spēli </button>
 
-                    <!--<div class="block">S</div>
+               <!-- <input  id="burtuskaits" type="button" value="Sākt spēli" onclick="saktSpeli( lv);">
+                 <button class="starts">Sākt spēli</button>
+                <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">-->
+               
+                <div class="game" id="games"> 
+                <p id="countdown">10:00</p>
+                <label style="margin:20px;" id="punkti"></label>
+                
+
+                    <div class="block">S</div>
                     <div class="block">A</div>
                     <div class="block">U</div>
                     <div class="block">L</div>
-                    <div class="block">E</div> -->
+                    <div class="block">E</div> 
                </div>
-            </form>
+            </form> 
         </div>
         </section>
         </div>
     </div>
     <script>
 
-    const sp = document.querySelector ('.sp')
-    const game =document.querySelector ('.input')
-    let play = false;
+        const startingMinutes = 10;
+        let time = startingMinutes * 60;
 
-    sp.addEventListener ('click', function( )
-     { if (!play)
-    {play = true ; 
-        sp.innerHTML = "game";
-        game.classList.toggle ('game')
-    }
-}   
+        const countdownEl = document.getElementById ('countdown')
+        setInterval (updateCountdown , 1000);
+
+        function updateCountdown () {
+            const minutes = Math.floor ( time / 60);
+           let seconds= time % 60;
+           seconds= seconds <10 ? '0'+ seconds : seconds;
+           laiksEl.innerHTML = `${minutes}: ${seconds}`;
+           time--; 
+        }
+
+       //const btn =document.getElementById ('btn')
+       //const atbilde =document.getElementById ('input' )
+        //const game =document.getElementById (.game)
+        
+       // let play =false
+
+       // let output= document.getElementById ('ievaditaisSkaitlis');
+       // btn.addEventListener('click', function ()
+        //{ if (!play) {
+          //  play= true;
+          //  btn.innerHTML = "Iesniegt atbildi";
+           // atbilde.classList.toggle ('game'); } }
 
     </script>
+
 </body>
 </html>
