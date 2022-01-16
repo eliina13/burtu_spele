@@ -44,9 +44,15 @@
         </div> <!--Šajā vietā beidzas head daļa-->
 
         <div class="content">
+            <br>
+            <br>
             <form> 
                 <label for="bskaits"> Burtu skaits vārdā:</label> <br> 
-                <input type="number" min="4" max="10" name="cik" value="5" > 
+                <input type="number" min="5" max="10" name="cik" value="5" >
+                <input type="button" value="Sākt spēli" onclick="saktspeli(cik.value);" >
+                <br>
+                <label style="margin:20px;" id="laiks">laiks = 60 s</label>
+                <label style="margin:20px;" id="punkti"></label>
             </form>
                <div class="game"> 
                     <div class="block">S</div>
@@ -58,6 +64,7 @@
         </div>
     </div>
     <script>
+ function saktspeli (cik.value)
 
     </script>
 </body>
