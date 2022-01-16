@@ -26,8 +26,8 @@ section {
     align-items: center;
 }
 .startaLaukums {
-    width: 50%;
-    height: 400%;
+    width: 70%;
+    height: 400px;
     padding: 20px 0;
     background-color: rgb(222, 205, 245);
     display: flex;
