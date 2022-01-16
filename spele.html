@@ -50,7 +50,7 @@
             <form> 
                 <label for="bskaits"> Burtu skaits vārdā:</label> <br> 
                 <input type="number" min="5" max="10" name="cik" >
-                <input type="button" value="Sākt spēli" onclick="saktspeli(vertiba);" >
+                <input id="burtuskaits" type="button" value="Sākt spēli" onclick="saktspeli(vertiba);" >
                 <br>
                 <label style="margin:20px;" id="laiks">laiks = 60 s</label>
                 <label style="margin:20px;" id="punkti"></label>
@@ -67,9 +67,11 @@
     </div>
     <script>
 
-    let 
-    function saktspeli (vertiba)
-    alert ("testing")
+    
+    function saktspeli (vertiba) {
+        let burtuskaits = dokument.querySelector ("burtuskaits")
+    }
+
 
     </script>
 </body>
