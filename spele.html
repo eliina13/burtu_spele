@@ -57,16 +57,27 @@
                  <button class="starts">Sākt spēli</button>
                 <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">-->
                
+                <!--Vardu ievade-->
                 <div class="game" id="games"> 
-                <h4 > 00:00 </h4>
-                <label style="margin:20px;" id="punkti"></label>
-                
+                  <p class="lead" >Izveido no dotajiem burtiem vārdu!
+                   <!-- <span class="text-success" id="seconds">60</span>
+                    Sekunds:</p>-->
+                <h2 class="display-2 mb-5" id="currentWord">Sveiks</h2>
+                <input type="text" class="kontrole" placeholder="Raksti šeit" id="wordInput" autofocus>
+                <h4 class="mt3"  id="message"> </h4>
 
-                    <div class="block">S</div>
-                    <div class="block">A</div>
-                    <div class="block">U</div>
-                    <div class="block">L</div>
-                    <div class="block">E</div> 
+                <!-- Laiks un rezultāts-->
+                <h3>Atlikušais laiks
+                      <span id="time">00:00</span> </h3>
+                <h3> Rezultāts 
+                    <span id="score">0</span>
+                </h3>
+
+
+
+
+                
+            
                </div>
             </form> 
         </div>
