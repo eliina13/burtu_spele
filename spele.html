@@ -58,7 +58,7 @@
                 <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">-->
                
                 <div class="game" id="games"> 
-                <p id="countdown">10:00</p>
+                <h4 > 00:00 </h4>
                 <label style="margin:20px;" id="punkti"></label>
                 
 
@@ -73,34 +73,7 @@
         </section>
         </div>
     </div>
-    <script>
-
-        const startingMinutes = 10;
-        let time = startingMinutes * 60;
-
-        const countdownEl = document.getElementById ('countdown')
-        setInterval (updateCountdown , 1000);
-
-        function updateCountdown () {
-            const minutes = Math.floor ( time / 60);
-           let seconds= time % 60;
-           seconds= seconds <10 ? '0'+ seconds : seconds;
-           laiksEl.innerHTML = `${minutes}: ${seconds}`;
-           time--; 
-        }
-
-       //const btn =document.getElementById ('btn')
-       //const atbilde =document.getElementById ('input' )
-        //const game =document.getElementById (.game)
-        
-       // let play =false
-
-       // let output= document.getElementById ('ievaditaisSkaitlis');
-       // btn.addEventListener('click', function ()
-        //{ if (!play) {
-          //  play= true;
-          //  btn.innerHTML = "Iesniegt atbildi";
-           // atbilde.classList.toggle ('game'); } }
+    <script src="spele.js"> 
 
     </script>
 
