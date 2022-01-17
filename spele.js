@@ -23,5 +23,7 @@ function endTime ( ) {
   timeH.innerHTML = 'Laiks beidzies!';  
 }
 
+// laika kontrole
+
 
 
