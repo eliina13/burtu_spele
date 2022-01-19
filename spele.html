@@ -48,23 +48,9 @@
             <section> 
             <div class="startaLaukums"> 
                 
-            <form> 
-                <label id=ievaditaisSkaitlis for="bskaits"> Burtu skaits vārdā:</label> <br> 
-               <input id=ievade type="number" min="5" max="10" name="cik" class="vg" >
-                <button class= "btn" value="Sākt spēli" onclick="saktSpeli( lv);">Sākt spēli </button>
-
-               <!-- <input  id="burtuskaits" type="button" value="Sākt spēli" onclick="saktSpeli( lv);">
-                 <button class="starts">Sākt spēli</button>
-                <input id="burtuskaits" type="button" value="Sākt spēli" class= "sp">-->
-               
-                <!--Vardu ievade-->
-                <div class="game" id="games"> 
-                  <p class="lead" >Izveido no dotajiem burtiem vārdu!
-                   <!-- <span class="text-success" id="seconds">60</span>
-                    Sekunds:</p>-->
-                <h2 class="display-2 mb-5" id="currentWord">Sveiks</h2>
-                <input type="text" class="kontrole" placeholder="Raksti šeit" id="wordInput" autofocus>
-                <h4 class="mt3"  id="message"> </h4>
+              <h3 class="msg"> </h3>
+              <input type="text" class="hidden">
+              <button class="btn">Lai sāktu noklikšķini!</button>
 
                 <!-- Laiks un rezultāts-->
                 <h3>Atlikušais laiks
@@ -72,14 +58,8 @@
                 <h3> Rezultāts 
                     <span id="score">0</span>
                 </h3>
-
-
-
-
-                
             
                </div>
-            </form> 
         </div>
         </section>
         </div>
