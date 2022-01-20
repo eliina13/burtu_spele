@@ -59,7 +59,9 @@ btn.addEventListener ('click', function () {
   }
 })
 
-let time = 60;
+
+
+let time = 10;
 let score = 0;
 
 const scoreDisplay = document.querySelector ('.score');
@@ -74,11 +76,12 @@ function countDown () {
   if ( time > 0 ) {
     time -- ; 
   } else if ( time === 0 ) {
-      isPlaying = false;
+      play = false;
     }
     timeDisplay.innerHTML = time;
+   
 }
-alert
+
 
   
 
@@ -86,4 +89,8 @@ alert
 function checkStatus () {
   if (!play && time === 0) {message.innerHTML = 'Spēle beigusies!'}
 score = 0;}
+
+///document.querySelector ('rezultats')
+//var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
+
 
