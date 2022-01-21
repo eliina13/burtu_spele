@@ -61,7 +61,7 @@ btn.addEventListener ('click', function () {
 
 
 
-let time = 10;
+let time = 60;
 let score = 0;
 
 const scoreDisplay = document.querySelector ('.score');
