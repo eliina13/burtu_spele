@@ -13,6 +13,7 @@ const creatNewWords = () => {
   return newTempSwords;
 }
 
+
 const scrambleWords = (arr)=> {
   for (let i = arr.length-1; i>0; i--){
     let temp = arr[i];
@@ -27,7 +28,7 @@ const scrambleWords = (arr)=> {
     return arr;
   }
 }
-  
+ 
 
 btn.addEventListener ('click', function () {
   if (!play){
@@ -48,7 +49,7 @@ btn.addEventListener ('click', function () {
      btn.innerHTML = "Turpināt!";
     guess.classList.toggle ('hidden');
      guess.value ="";
-        score++;
+        
     }else {
       console.log('Nepareizi');
       msg.innerHTML = `Nepareizi! Spēle beigusies!`;
@@ -61,11 +62,12 @@ btn.addEventListener ('click', function () {
 
 
 
-let time = 60;
+let time = 10;
 let score = 0;
 
 const scoreDisplay = document.querySelector ('.score');
 const timeDisplay = document.querySelector ('.time');
+
 
 
 //laiks
@@ -92,5 +94,3 @@ score = 0;}
 
 ///document.querySelector ('rezultats')
 //var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
-
-
