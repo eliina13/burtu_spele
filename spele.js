@@ -6,6 +6,7 @@ let sWord= ['skola', 'pavasaris', 'ritenis', 'suns', 'diennakts', 'nakts', 'gada
 let newWords = "";
 let randWords = "";
 
+
 const creatNewWords = () => {
   let ranNum = Math.floor(Math.random() * sWord.length);
   let newTempSwords= sWord [ranNum];
@@ -28,8 +29,6 @@ const scrambleWords = (arr)=> {
     return arr;
   }
 }
- 
-
 btn.addEventListener ('click', function () {
   if (!play){
     play = true;
@@ -47,24 +46,18 @@ btn.addEventListener ('click', function () {
      play = false;
      msg.innerHTML = `Pareizi!`;
      btn.innerHTML = "Turpināt!";
+     score= score + 10;
+     scoreDisplay.innerHTML= score;
     guess.classList.toggle ('hidden');
      guess.value ="";
-        
+       
     }else {
       console.log('Nepareizi');
       msg.innerHTML = `Nepareizi! Spēle beigusies!`;
       btn.innerHTML = "Sākt no jauna!"
-      
-
     }
   }
 })
-
-
-
-let time = 10;
-let score = 0;
-
 const scoreDisplay = document.querySelector ('.score');
 const timeDisplay = document.querySelector ('.time');
 
@@ -72,25 +65,35 @@ const timeDisplay = document.querySelector ('.time');
 
 //laiks
 setInterval (countDown , 1000 );
-//setInterval (checkStatus , 50)
+setInterval (checkStatus , 50)
+
+let time = 10;
+let score = 0;
 
 function countDown () {
-  if ( time > 0 ) {
+  if ( play == true && time > 0) {
     time -- ; 
-  } else if ( time === 0 ) {
-      play = false;
-    }
+  } 
+else {
+  play = false;
+}
     timeDisplay.innerHTML = time;
    
 }
 
-
-  
-
 //Parbauda statusu
+//let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
 function checkStatus () {
-  if (!play && time === 0) {message.innerHTML = 'Spēle beigusies!'}
-score = 0;}
+  if ( !play && time == 0)
+   {msg.innerHTML = 'Spēle beigusies!';
+   btn.innerHTML = "Sākt no jauna!";
+   guess.classList= "hidden";
+  
+ //else if {}
+  } 
+}
 
-///document.querySelector ('rezultats')
+//console.log (answer);
+
+//document.querySelector ('rezultats')
 //var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
