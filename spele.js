@@ -82,7 +82,7 @@ else {
 }
 
 //Parbauda statusu
-//let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
+let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
 function checkStatus () {
   if ( !play && time == 0)
    {msg.innerHTML = 'Spēle beigusies!';
@@ -93,7 +93,7 @@ function checkStatus () {
   } 
 }
 
-//console.log (answer);
+console.log (answer);
 
 //document.querySelector ('rezultats')
 //var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
