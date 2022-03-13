@@ -56,6 +56,7 @@ btn.addEventListener ('click', function () {
       console.log('Nepareizi');
       msg.innerHTML = `Nepareizi! Spēle beigusies!`;
       btn.innerHTML = "Sākt no jauna!"
+      console.log (answer);
     }
   }
 })
@@ -89,7 +90,7 @@ function checkStatus () {
    {msg.innerHTML = 'Spēle beigusies!';
    btn.innerHTML = "Sākt no jauna!";
    guess.classList= "hidden";
-   console.log (answer);
+   
  //else if {}
   } 
 }
