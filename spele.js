@@ -5,6 +5,7 @@ let play = false;
 let sWord= ['skola', 'pavasaris', 'ritenis', 'suns', 'diennakts', 'nakts', 'gadalaiks'];
 let newWords = "";
 let randWords = "";
+let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
 
 
 const creatNewWords = () => {
@@ -82,18 +83,19 @@ else {
 }
 
 //Parbauda statusu
-let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
+
 function checkStatus () {
   if ( !play && time == 0)
    {msg.innerHTML = 'Spēle beigusies!';
    btn.innerHTML = "Sākt no jauna!";
    guess.classList= "hidden";
-  
+   console.log (answer);
  //else if {}
   } 
 }
 
-console.log (answer);
+
+
 
 //document.querySelector ('rezultats')
 //var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
