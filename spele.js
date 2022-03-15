@@ -5,7 +5,6 @@ let play = false;
 let sWord= ['skola', 'pavasaris', 'ritenis', 'suns', 'diennakts', 'nakts', 'gadalaiks'];
 let newWords = "";
 let randWords = "";
-let answer = prompt ('Ja vēleis reģistrēt rezultātu ievadi savu vārdu!')
 
 
 const creatNewWords = () => {
@@ -51,15 +50,17 @@ btn.addEventListener ('click', function () {
      scoreDisplay.innerHTML= score;
     guess.classList.toggle ('hidden');
      guess.value ="";
-       
-    }else {
+    }
+    
+    else {
       console.log('Nepareizi');
       msg.innerHTML = `Nepareizi! Spēle beigusies!`;
       btn.innerHTML = "Sākt no jauna!"
-      console.log (answer);
+      prompt ('Ievadi vārdu, ja gribi reģistrēt rezultātu!')
     }
   }
 })
+
 const scoreDisplay = document.querySelector ('.score');
 const timeDisplay = document.querySelector ('.time');
 
@@ -75,28 +76,27 @@ let score = 0;
 function countDown () {
   if ( play == true && time > 0) {
     time -- ; 
+    
   } 
+
 else {
   play = false;
 }
     timeDisplay.innerHTML = time;
+    
    
 }
 
 //Parbauda statusu
-
 function checkStatus () {
   if ( !play && time == 0)
-   {msg.innerHTML = 'Spēle beigusies!';
+   {msg.innerHTML = 'Spēle beigusies!'
    btn.innerHTML = "Sākt no jauna!";
    guess.classList= "hidden";
-   
- //else if {}
-  } 
-}
+   prompt ('Ievadi vārdu, ja gribi reģistrēt rezultātu!')
+}}
 
 
-
-
+ //else if  
 //document.querySelector ('rezultats')
 //var atbilde = prompt ("Lai reģistrētu rezultātu, ievadi savu vārdu!");
