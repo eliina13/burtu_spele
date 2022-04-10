@@ -98,7 +98,10 @@ function checkStatus () {
     
 }}
 
+function registretRezultatu(){
+console.log ('registretRezultatu () darbojas');
 
+}
 async function radaRezultatu (){
   let datiNoServera = await featch ('API'+ '/lasit');
   rezultats.innerHTML = dati;
