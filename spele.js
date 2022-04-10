@@ -1,3 +1,4 @@
+const API ="https://burtusp.eliina13.repl.co"
 const msg = document.querySelector ('.msg');
 const guess = document.querySelector ('input');
 const btn = document.querySelector ('.btn');
@@ -98,6 +99,10 @@ function checkStatus () {
 }}
 
 
+async function radaRezultatu (){
+  let datiNoServera = await featch ('API'+ '/lasit');
+  rezultats.innerHTML = dati;
+}
 //function test (){
   //let answe = prompt ('Kād ir Tavs vārds?');
   

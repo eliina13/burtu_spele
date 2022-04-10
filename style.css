@@ -41,3 +41,9 @@ section {
 .hidden {
     display: none;
 }
+.rezultats {
+    background: rgb(219, 184, 218);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
