@@ -7,6 +7,8 @@ let play = false;
 let sWord= ['skola', 'pavasaris', 'ritenis', 'suns', 'diennakts', 'nakts', 'gadalaiks'];
 let newWords = "";
 let randWords = "";
+let vards = document.querySelector ('.vards');
+let rezultati = document.querySelector ('.rezultats');
 
 
 const creatNewWords = () => {
@@ -58,7 +60,7 @@ btn.addEventListener ('click', function () {
       console.log('Nepareizi');
       msg.innerHTML = `Nepareizi! Spēle beigusies!`;
       btn.innerHTML = "Sākt no jauna!";
-      prompt ('Ievadi vārdu, ja gribi reģistrēt rezultātu!' )
+    
     }
   }
 })
@@ -77,7 +79,6 @@ let score = 0;
 function countDown () {
   if ( play == true && time > 0) {
     time -- ; 
-    
   } 
   
 else {
@@ -92,22 +93,28 @@ else {
 function checkStatus () {
   if ( !play && time == 0)
    {msg.innerHTML = 'Spēle beigusies!'
-   prompt ('Ievadi vārdu, ja gribi reģistrēt rezultātu!')
+  
    btn.innerHTML = "Sākt no jauna!";
-   guess.classList= "hidden";
-    
+   guess.classList= "hidden";  
 }}
 
+
+//rezultātu reģistrācija
 function registretRezultatu(){
 console.log ('registretRezultatu () darbojas');
 
+rezultati.innerHTML = rezultati.innerHTML  + '<br/>'+ vards.value;
 }
-async function radaRezultatu (){
-  let datiNoServera = await featch ('API'+ '/lasit');
-  rezultats.innerHTML = dati;
+
+async function ieladeRezultatu()
+{
+  let datiNoServera = await fetch('rezultati.txt');
+  let dati = await datiNoServera.text();
+  rezultati.innerHTML = dati;
 }
+
+ 
 //function test (){
-  //let answe = prompt ('Kād ir Tavs vārds?');
   
   //{console.log(answe)}}
 
