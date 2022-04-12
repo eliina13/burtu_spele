@@ -1,6 +1,6 @@
-Santa
-Matīss
-Rinalds
-Mārtiņš
-Marta
-Žanete
+Santa <br/>
+Matīss <br/>
+Rinalds <br/>
+Mārtiņš <br/>
+Marta <br/>
+Žanete <br/>

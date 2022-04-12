@@ -10,7 +10,6 @@ let randWords = "";
 let vards = document.querySelector ('.vards');
 let rezultati = document.querySelector ('.rezultats');
 
-
 const creatNewWords = () => {
   let ranNum = Math.floor(Math.random() * sWord.length);
   let newTempSwords= sWord [ranNum];
@@ -103,17 +102,39 @@ function checkStatus () {
 function registretRezultatu(){
 console.log ('registretRezultatu () darbojas');
 
-rezultati.innerHTML = rezultati.innerHTML  + '<br/>'+ vards.value;
+rezultati.innerHTML = rezultati.innerHTML  + '<br/>'+ vards.value +':'+score+'<br />';
+
+fetch(API +'/sutit/'+vards.value +'/' + score)
 }
 
 async function ieladeRezultatu()
 {
-  let datiNoServera = await fetch('rezultati.txt');
+  let datiNoServera = await fetch(API + '/lasit');
   let dati = await datiNoServera.text();
   rezultati.innerHTML = dati;
 }
 
- 
+
+//setInterval (ieladeRezultatu, 1000)
+async function ieladeRezultatuJson()
+{
+  let datiNoServera = await fetch(API + '/lasit');
+  let dati = await datiNoServera.json();
+
+  i = 0;
+  while ( i < await dati.length )
+    {
+        console.log(i);
+       rezultati.innerHTML = rezultati.innerHTML+dati[i]['vards']+': '+dati[i][score]+'<br />';
+
+        i = i+1;
+    }
+
+    rezultati.scrollTop = rezultati.scrollHeight;
+}//beidzas ieladeRezultatuJson()
+
+//setInterval(ieladeRezultatuJson,1000)
+
 //function test (){
   
   //{console.log(answe)}}
