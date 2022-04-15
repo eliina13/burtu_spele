@@ -107,12 +107,12 @@ rezultati.innerHTML = rezultati.innerHTML  + '<br/>'+ vards.value +':'+score+'<b
 fetch(API +'/sutit/'+vards.value +'/' + score)
 }
 
-async function ieladeRezultatu()
-{
-  let datiNoServera = await fetch(API + '/lasit');
-  let dati = await datiNoServera.text();
-  rezultati.innerHTML = dati;
-}
+//async function ieladeRezultatu()
+//{
+ // let datiNoServera = await fetch(API + '/lasit');
+ // let dati = await datiNoServera.text();
+ // rezultati.innerHTML = dati;
+//}
 
 
 //setInterval (ieladeRezultatu, 1000)
@@ -121,10 +121,10 @@ async function ieladeRezultatuJson()
   let datiNoServera = await fetch(API + '/lasit');
   let dati = await datiNoServera.json();
 
-  i = 0;
-  while ( i < await dati.length )
+ i = 0;
+ while ( i < await dati.length )
     {
-        console.log(i);
+       console.log(i);
        rezultati.innerHTML = rezultati.innerHTML+dati[i]['vards']+': '+dati[i][score]+'<br />';
 
         i = i+1;
@@ -133,7 +133,7 @@ async function ieladeRezultatuJson()
     rezultati.scrollTop = rezultati.scrollHeight;
 }//beidzas ieladeRezultatuJson()
 
-//setInterval(ieladeRezultatuJson,1000)
+//setInterval(ieladeRezultatuJson,10000)
 
 //function test (){
   
